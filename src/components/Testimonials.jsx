@@ -1,14 +1,30 @@
 import { motion } from "framer-motion";
 import { testimonials } from "../constants";
 
+// ✅ Reusable fadeInUp variant
+const fadeInUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (delay = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      delay,
+      ease: [0.25, 0.1, 0.25, 1],
+    },
+  }),
+};
+
 const Testimonials = () => {
   return (
     <div className="tracking-wide bg-gray-900 min-h-screen text-white py-16 px-6">
       {/* Heading */}
       <motion.h2
-        initial={{ opacity: 0, y: -40, scale: 0.95 }}
-        whileInView={{ opacity: 1, y: 0, scale: 1 }}
-        transition={{ duration: 1, ease: "easeInOut" }}
+        variants={fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.2 }}
+        custom={0}
         className="text-3xl sm:text-5xl lg:text-6xl text-center my-10 lg:my-20"
       >
         Testimonies From Our{" "}
@@ -22,13 +38,11 @@ const Testimonials = () => {
         {testimonials.map((testimonial, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: 60, scale: 0.95 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{
-              duration: 1.1,
-              ease: [0.25, 0.1, 0.25, 1], // smooth cubic-bezier easing
-              delay: index * 0.25, // stagger effect
-            }}
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.2 }}
+            custom={0.2 + index * 0.2} // staggered animation
             className="w-full sm:w-1/2 lg:w-1/3 px-4 py-2"
           >
             <div className="bg-blue-900/40 rounded-md p-6 text-md border border-blue-800 shadow-lg hover:shadow-blue-600/40 transition">

@@ -2,14 +2,30 @@ import { motion } from "framer-motion";
 import video1 from "../assets/video1.mp4";
 import video2 from "../assets/video2.mp4";
 
+// ✅ Variants for smooth reusable animations
+const fadeInUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (delay = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      delay,
+      ease: [0.25, 0.1, 0.25, 1],
+    },
+  }),
+};
+
 const HeroSection = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-neutral-900 text-white px-6">
       {/* Heading */}
       <motion.h1
-        initial={{ opacity: 0, y: -40, scale: 0.95 }}
-        whileInView={{ opacity: 1, y: 0, scale: 1 }}
-        transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
+        variants={fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.2 }}
+        custom={0}
         className="text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide"
       >
         Dream House{" "}
@@ -20,9 +36,11 @@ const HeroSection = () => {
 
       {/* Paragraph */}
       <motion.p
-        initial={{ opacity: 0, y: 40, scale: 0.98 }}
-        whileInView={{ opacity: 1, y: 0, scale: 1 }}
-        transition={{ duration: 1.1, ease: [0.25, 0.1, 0.25, 1], delay: 0.2 }}
+        variants={fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.2 }}
+        custom={0.2}
         className="mt-6 text-lg text-center text-neutral-300 max-w-4xl"
       >
         Dream House Chapel, The God-Kind. In our days, it is difficult to
@@ -37,9 +55,11 @@ const HeroSection = () => {
 
       {/* Buttons */}
       <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1, ease: "easeInOut", delay: 0.4 }}
+        variants={fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.2 }}
+        custom={0.4}
         className="mt-8 flex gap-4 justify-center flex-wrap"
       >
         <a
@@ -49,22 +69,20 @@ const HeroSection = () => {
           Watch Sermons
         </a>
         <a
-          href="/AboutPage"
+          href="/about"
           className="px-6 py-3 bg-white text-gray-900 rounded-lg font-semibold hover:bg-gray-200 transition"
         >
           More About Us
         </a>
       </motion.div>
 
-      {/* Responsive Videos */}
+      {/* Videos */}
       <motion.div
-        initial={{ opacity: 0, y: 60, scale: 0.95 }}
-        whileInView={{ opacity: 1, y: 0, scale: 1 }}
-        transition={{
-          duration: 1.1,
-          ease: [0.25, 0.1, 0.25, 1],
-          delay: 0.6,
-        }}
+        variants={fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.2 }}
+        custom={0.6}
         className="flex flex-col md:flex-row mt-12 justify-center w-full max-w-6xl gap-4"
       >
         <video

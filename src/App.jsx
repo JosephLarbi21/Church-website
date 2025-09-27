@@ -11,6 +11,7 @@ import Contact from "./assets/components/Contact.jsx"; // ✅ fixed path
 import Ministries from "./pages/Ministries.jsx";
 import BibleStudies from "./pages/BibleStudies.jsx";
 import AboutPage from "./components/AboutPage.jsx";
+import Service from "./components/Service.jsx";
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
           <Route path="/sermons" element={<Sermons />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/events" element={<Events />} />
+          <Route path="/Service" element={<Service />} />
           <Route path="/giving" element={<Giving />} />
           <Route path="/ministries" element={<Ministries />} />
           <Route path="/bible-studies" element={<BibleStudies />} />
