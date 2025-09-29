@@ -1,74 +1,92 @@
+import { motion } from "framer-motion";
+
 export default function Sermons() {
   const sermons = [
-    { 
-      title: 'Grace Abounds', 
-      speaker: 'Rev. John Doe', 
-      date: 'Aug 18, 2025', 
-      url: 'https://www.youtube.com/watch?v=imY9Yv1LRYI&list=RDimY9Yv1LRYI&start_radio=1' 
+    {
+      title: "Grace Abounds",
+      speaker: "Rev. John Doe",
+      date: "Aug 18, 2025",
+      url: "https://www.youtube.com/watch?v=imY9Yv1LRYI",
     },
-    { 
-      title: 'Overcoming Fear', 
-      speaker: 'Rev. Jane Smith', 
-      date: 'Aug 10, 2025', 
-      url: 'https://www.youtube.com/watch?v=abc123XYZ' 
+    {
+      title: "Overcoming Fear",
+      speaker: "Rev. Jane Smith",
+      date: "Aug 10, 2025",
+      url: "https://www.youtube.com/watch?v=abc123XYZ",
     },
-    { 
-      title: 'Living in Purpose', 
-      speaker: 'Rev. John Doe', 
-      date: 'Aug 3, 2025', 
-      url: 'https://www.youtube.com/watch?v=xyz789ABC' 
+    {
+      title: "Living in Purpose",
+      speaker: "Rev. John Doe",
+      date: "Aug 3, 2025",
+      url: "https://www.youtube.com/watch?v=xyz789ABC",
     },
-  ]
+  ];
 
-  // Function to extract YouTube video ID from URL
+  // Extract YouTube ID
   const getYoutubeId = (url) => {
     const regex = /(?:youtube\.com.*(?:\?|&)v=|youtu\.be\/)([^&#]+)/;
     const match = url.match(regex);
     return match ? match[1] : null;
-  }
+  };
 
   return (
-    <section className="container py-12">
-      <h1 className="text-3xl font-bold mb-6">Sermons</h1>
-      <div className="grid md:grid-cols-3 gap-6">
+    <div className="bg-neutral-900 text-white min-h-screen py-16 px-6">
+      {/* Heading */}
+      <motion.h1
+        initial={{ opacity: 0, y: -40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-14"
+      >
+        Latest{" "}
+        <span className="bg-gradient-to-r from-blue-400 to-blue-800 text-transparent bg-clip-text">
+          Sermons
+        </span>
+      </motion.h1>
+
+      {/* Sermons Grid */}
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
         {sermons.map((s, i) => {
           const videoId = getYoutubeId(s.url);
-          const thumbnail = videoId
-            ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
-            : "https://via.placeholder.com/320x180?text=No+Thumbnail";
 
           return (
-            <a
+            <motion.div
               key={i}
-              href={s.url}
-              target="_blank"
-              rel="noreferrer"
-              className="border rounded-xl overflow-hidden hover:shadow-lg transition-shadow"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: i * 0.2 }}
+              className="rounded-xl overflow-hidden shadow-lg bg-neutral-800 border border-neutral-700 hover:shadow-blue-600/40 transition-all"
             >
-              {/* Thumbnail with Play Overlay */}
-              <div className="relative">
-                <img src={thumbnail} alt={s.title} className="w-full h-48 object-cover" />
-                <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-                  <svg
-                    className="w-12 h-12 text-white"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
+              {/* Embedded YouTube Video */}
+              {videoId ? (
+                <div className="aspect-w-16 aspect-h-9">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${videoId}`}
+                    title={s.title}
+                    className="w-full h-56 md:h-64 lg:h-48"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
                 </div>
-              </div>
+              ) : (
+                <div className="w-full h-48 bg-gray-700 flex items-center justify-center text-gray-300">
+                  No Video Available
+                </div>
+              )}
 
               {/* Info */}
-              <div className="p-4">
-                <div className="font-semibold text-lg">{s.title}</div>
-                <div className="text-sm text-gray-600">{s.speaker}</div>
-                <div className="text-xs text-gray-500">{s.date}</div>
+              <div className="p-5">
+                <h3 className="text-xl font-semibold mb-1 hover:text-blue-400 transition-colors">
+                  {s.title}
+                </h3>
+                <p className="text-sm text-neutral-400">{s.speaker}</p>
+                <p className="text-xs text-neutral-500">{s.date}</p>
               </div>
-            </a>
-          )
+            </motion.div>
+          );
         })}
       </div>
-    </section>
-  )
+    </div>
+  );
 }

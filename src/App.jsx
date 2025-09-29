@@ -12,6 +12,8 @@ import Ministries from "./pages/Ministries.jsx";
 import BibleStudies from "./pages/BibleStudies.jsx";
 import AboutPage from "./components/AboutPage.jsx";
 import Service from "./components/Service.jsx";
+import Livestream from "./components/LiveStream.jsx";
+import MoreAboutUs from "./components/MoreAboutUs.jsx";
 
 export default function App() {
   return (
@@ -26,10 +28,12 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/sermons" element={<Sermons />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/moreaboutus" element={<MoreAboutUs />} />
           <Route path="/events" element={<Events />} />
           <Route path="/Service" element={<Service />} />
           <Route path="/giving" element={<Giving />} />
           <Route path="/ministries" element={<Ministries />} />
+          <Route path="/livestream" element={<Livestream />} />
           <Route path="/bible-studies" element={<BibleStudies />} />
           <Route path="/contact" element={<Contact />} />
 

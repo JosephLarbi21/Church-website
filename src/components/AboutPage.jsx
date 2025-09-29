@@ -4,7 +4,7 @@ import { checklistItems } from "../constants";
 
 const AboutPage = () => {
   return (
-    <div className="bg-gray-800 text-white py-16 px-6 min-h-screen flex flex-col justify-center">
+    <div className="bg-neutral-900 text-white py-16 px-6 min-h-screen flex flex-col justify-center">
       {/* Heading */}
       <motion.h2
         initial={{ opacity: 0, y: -40, scale: 0.95 }}

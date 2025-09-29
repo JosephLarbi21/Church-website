@@ -18,7 +18,7 @@ const fadeInUp = {
 
 const HeroSection = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-neutral-900 text-white px-6">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-neutral-950 text-white px-6">
       {/* Heading */}
       <motion.h1
         variants={fadeInUp}
@@ -62,18 +62,25 @@ const HeroSection = () => {
         custom={0.4}
         className="mt-8 flex gap-4 justify-center flex-wrap"
       >
-        <a
-          href="/sermons"
-          className="px-6 py-3 bg-blue-600 rounded-lg font-semibold hover:bg-blue-700 transition"
-        >
-          Watch Sermons
-        </a>
-        <a
-          href="/about"
-          className="px-6 py-3 bg-white text-gray-900 rounded-lg font-semibold hover:bg-gray-200 transition"
-        >
-          More About Us
-        </a>
+       <a
+    href="/sermons"
+    className="px-6 py-3 rounded-xl font-semibold text-white 
+               bg-gradient-to-r from-blue-600 to-blue-800 
+               shadow-md hover:shadow-blue-600/40 hover:scale-105 
+               transition-all duration-300"
+  >
+    Watch Sermons
+  </a>
+
+  {/* More About Us Button */}
+  <a
+    href="/moreaboutus"
+    className="px-6 py-3 rounded-xl font-semibold text-gray-900 
+               bg-white shadow-md hover:bg-gray-100 hover:shadow-lg 
+               hover:scale-105 transition-all duration-300"
+  >
+    More About Us
+  </a>
       </motion.div>
 
       {/* Videos */}
