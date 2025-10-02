@@ -53,7 +53,7 @@ const Footer = () => {
           </h3>
           <ul className="space-y-2 text-neutral-300">
             <li><a href="/sermons" className="hover:text-white">Sermons</a></li>
-            <li><a href="/events" className="hover:text-white">About Us</a></li>
+            <li><a href="/more-about-us" className="hover:text-white">About Us</a></li>
             <li><a href="/ministries" className="hover:text-white">Ministries</a></li>
             <li><a href="/contact" className="hover:text-white">Contact</a></li>
           </ul>

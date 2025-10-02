@@ -74,7 +74,7 @@ const HeroSection = () => {
 
   {/* More About Us Button */}
   <a
-    href="/moreaboutus"
+    href="/more-about-us"
     className="px-6 py-3 rounded-xl font-semibold text-gray-900 
                bg-white shadow-md hover:bg-gray-100 hover:shadow-lg 
                hover:scale-105 transition-all duration-300"

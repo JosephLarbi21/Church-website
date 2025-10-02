@@ -6,19 +6,25 @@ export default function Sermons() {
       title: "Grace Abounds",
       speaker: "Rev. John Doe",
       date: "Aug 18, 2025",
-      url: "https://www.youtube.com/watch?v=imY9Yv1LRYI",
+      url: "https://youtu.be/kM_dYdShorM?si=2i4myGkTidhVCxi4",
     },
     {
       title: "Overcoming Fear",
       speaker: "Rev. Jane Smith",
       date: "Aug 10, 2025",
-      url: "https://www.youtube.com/watch?v=abc123XYZ",
+      url: "https://youtu.be/G-mr8p2aIyM?si=QGfcgEOyw0EjmjxE",
     },
     {
       title: "Living in Purpose",
       speaker: "Rev. John Doe",
       date: "Aug 3, 2025",
-      url: "https://www.youtube.com/watch?v=xyz789ABC",
+      url: "https://youtu.be/EnGkxkukQOk?si=pY-SJ2cmFvkFWnI_",
+    },
+    {
+      title: "Living in Purpose",
+      speaker: "Rev. John Doe",
+      date: "Aug 3, 2025",
+      url: "https://youtu.be/EnGkxkukQOk?si=pY-SJ2cmFvkFWnI_",
     },
   ];
 

@@ -26,6 +26,11 @@ export const testimonials = [
     text: "Dream House Chapel International is where I fellowship. My life has been transformed since I joined this church. Our General Overseer Rev. Frederick Adjie-Boadi is not only an anointed Man of God but an excellent teacher, an adviser, and above all, a very good preacher. We've always been experiencing mind-blowing miracles and testimonies. I am grateful to God for leading me to this church.",
   },
   {
+    user: "Gwendolyn Beula Naa Adjeley Otchwemah Aryeh",
+    image: user11,
+    text: "I am a proud member of Dream House Chapel International, which I joined in 2011 after senior high school. Dream House has been my green and safe haven, where God has transformed my life through spirit-filled messages and godly counsel. Here, I’ve found a true family in Christ, growing in fellowship, worship, and purpose. Though imperfect, I’ve experienced God’s love and continuous testimonies that have strengthened my faith. Dream House Chapel International is truly an experience — come and witness it for yourself.",
+  },
+  {
     user: "Marie-lyse Quansah",
     
     image: user2,
@@ -37,11 +42,7 @@ export const testimonials = [
     image: user3,
     text: "I am very appreciative of the opportunity God has given me to be part of Dream House Chapel International. This is a wonderful kingdom and I am so pleased to be here. I joined Dream House as a child and I can boldly say, there has been nothing but pure euphoria, power, testimonies, and grace. The exuberant is un-endless. ",
   },
-  {
-    user: "Gwendolyn Beula Naa Adjeley Otchwemah Aryeh",
-    image: user11,
-    text: "I am a proud member of Dream House Chapel International. I was privileged by the Lord to have joined this kingdom of God in 2011 after my senior high school education. Dream House has been for me my green and safe haven. The Lord has used His servant mightily to transform my life through the spirit-filled  seasonal messages and multitude of Godly counsels that has modelled me into the Light of God's will and purpose and has informed my decisions. I am singularly grateful to God for bringing me into this well of living waters that never run dry. The Lord has led me on the path of continuous tangible testimonies that has more encouraged me in the Lord. Our church is a wonderful family of God and service experiences are when we come together to worship and support one another. Experiencing fellowship together is what church life is meant to be and that's exactly what Dream House presents. I am not perfect and still mess up, but God love me despite my flaws and imperfections. Dream House Chapel International is indeed an experience. Come and witness it yourself. ",
-  },
+  ,
   {
     user: "Obaa Yaa",
     
@@ -96,7 +97,7 @@ export const features = [
 
 export const checklistItems = [
   {
-    title: "NAME: REV. FREDERICK ADJIE-BOADI.",
+    title: " REV. FREDERICK ADJIE-BOADI.",
     description:
       "Founder And Prophet.",
   },
