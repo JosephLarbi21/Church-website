@@ -70,10 +70,25 @@ const Footer = () => {
           <h3 className="text-lg font-semibold text-blue-500 mb-3">
             Contact Us
           </h3>
-          <p className="font-medium mb-3">
-            Email: dreamhousechapelint@gmail.com
-          </p>
-          <p className="font-medium">Phone: +233 26 937 7402</p>
+         <p className="font-medium mb-3">
+  Email:{" "}
+  <a
+    href="mailto:dreamhousechapelint@gmail.com"
+    className="text-blue-400 hover:underline"
+  >
+    dreamhousechapelint@gmail.com
+  </a>
+</p>
+
+<p className="font-medium">
+  Phone:{" "}
+  <a
+    href="tel:+233269377402"
+    className="text-blue-400 hover:underline"
+  >
+    +233 26 937 7402
+  </a>
+</p>
 
           <div className="flex space-x-6 mt-4 text-xl">
             <a href="#" className="hover:text-gray-400"><FaTiktok /></a>
