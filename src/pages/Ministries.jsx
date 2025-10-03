@@ -39,6 +39,14 @@ const Ministries = () => {
     { name: "Mr. Joseph Agyeman", role: "Treasurer" },
   ];
 
+  // Add this leadership list just after mensLeadership
+const womensLeadership = [
+  { name: "Mrs. Abena Danso", role: "President" },
+  { name: "Deaconess Mercy Nyarko", role: "Vice President" },
+  { name: "Mrs. Gloria Tetteh", role: "Secretary" },
+  { name: "Mrs. Esther Owusu", role: "Treasurer" },
+];
+
   const youthLeadership = [
     // We'll highlight Mr. Jones Yarley in copy below; still include supporting team
     { name: "Mr. Jones Yarley", role: "Youth Director" },
@@ -116,6 +124,51 @@ const Ministries = () => {
               </ul>
             </div>
           </motion.section>
+
+          {/* Women’s Fellowship */}
+<motion.section
+  className="bg-neutral-900 p-6 rounded-2xl border border-neutral-800 shadow-lg"
+  initial="hidden"
+  whileInView="show"
+  viewport={{ once: false, amount: 0.25 }}
+  variants={sectionVariant}
+>
+  <h2 className="text-2xl font-semibold text-blue-300 mb-3">
+    Women’s Fellowship Ministry
+  </h2>
+  <p className="text-neutral-300 mb-4 leading-relaxed">
+    The Women’s Fellowship Ministry provides a nurturing environment for women
+    to grow in faith, fellowship, and service. Through prayer gatherings,
+    discipleship programs, family support initiatives, and community outreach,
+    the ministry empowers women to live as godly examples in their homes,
+    workplaces, and society. The fellowship emphasizes mentorship between
+    generations, equipping young women with spiritual and practical guidance
+    from seasoned mothers in the church.
+  </p>
+
+  <div>
+    <h4 className="text-sm font-medium text-neutral-200 mb-2">
+      Leadership (Sample A)
+    </h4>
+    <ul className="text-sm text-neutral-300 divide-y divide-neutral-800 rounded-md overflow-hidden">
+      {womensLeadership.map((p, i) => (
+        <motion.li
+          className="flex justify-between px-4 py-3"
+          key={p.name}
+          custom={i}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.2 }}
+          variants={listItemVariant}
+        >
+          <span>{p.name}</span>
+          <span className="text-neutral-400">{p.role}</span>
+        </motion.li>
+      ))}
+    </ul>
+  </div>
+</motion.section>
+
 
           {/* Youth Ministry */}
           <motion.section
