@@ -28,17 +28,14 @@ const AboutUs = () => {
             Our History
           </h2>
           <p className="text-neutral-300 leading-relaxed">
-            Dream House Chapel International was founded with a burning vision
-            to raise a prophetic generation rooted in God’s Word and filled with
-            the Holy Spirit. From humble beginnings in a small gathering of
-            faithful believers, our church has grown into a vibrant spiritual
-            family in Accra, Ghana, reaching lives across borders. <br /> <br />
-            Over the years, we have experienced God’s unwavering faithfulness —
-            moving from a small rented hall into a permanent worship center,
-            expanding ministries, and raising leaders who now impact both the
-            local and global church. What started as a mustard seed has grown
-            into a prophetic movement, transforming lives through worship,
-            evangelism, discipleship, and service.
+            Dream House Chapel is a vibrant, multi- ethnic, prophetic church with several worshippers. Started in
+                    2006 as a fellowship in Somebody's Living room at La (Labadi) in Accra, the capital of Ghana.
+                    Founded by Rev. Frederick Adjei-Boadi. The prayer meetings grew by the special Grace of God and
+                    in 2011 the first ever Sunday Service was held in a class- room, wireless, still at La in Accra. The
+                    Holy Spirit had aforetime mentioned of a possible relocation and God proved His Faithfullness and by
+                    December 2014, we worshiped and celebrated God in our beautiful auditorium. Dream House Shares with
+                    everyone The God-Kind of Life in Christ Jesus.
+                
           </p>
         </motion.div>
 
@@ -51,13 +48,12 @@ const AboutUs = () => {
             className="bg-neutral-800 border border-neutral-700 rounded-xl p-8 shadow-lg hover:shadow-blue-600/30 transition"
           >
             <h2 className="text-2xl font-semibold text-blue-400 mb-4">
-              Our Vision
+              Our Mission
             </h2>
             <p className="text-neutral-300 leading-relaxed">
-              To build a prophetic house where believers are transformed through
-              sound teaching, prophetic direction, and practical empowerment —
-              raising men and women who influence every sphere of society for
-              the Kingdom of God.
+              The mission of Dream House Chapel is to empower everyone for Christ and in Christ to create an
+                    atmosphere of cordiality in our homes, schools, workplaces, church and in the community. 
+            
             </p>
           </motion.div>
 
@@ -68,13 +64,45 @@ const AboutUs = () => {
             className="bg-neutral-800 border border-neutral-700 rounded-xl p-8 shadow-lg hover:shadow-blue-600/30 transition"
           >
             <h2 className="text-2xl font-semibold text-blue-400 mb-4">
-              Our Mission
+              Our Beliefs
             </h2>
             <p className="text-neutral-300 leading-relaxed">
-              To preach the uncompromising Gospel of Jesus Christ, mentor the
-              next generation, equip the saints for Kingdom impact, and
-              establish a prophetic community marked by love, excellence, and
-              service to humanity.
+                 The Almighty God of Abraham, Isaac and Jacob (Isreal) is the Owner of The Heaven and
+                    The Earth
+                    including everything in it.He is the Covenant keeping God of King David . He is the God of
+                    the Sure Mercies of Solomon.He is the Living God of Daniel and His Prophets.The Faithful,
+                    The Only Holy God
+                    Here in Dream House, Jesus Christ is the Only Begotten of The Father, in Him is The Father well
+                    pleased. He is Our Lord and Master, Our Personal Saviour and Redeemer, Our King, Our Soon Coming
+                    King and our King Forever
+                    Again the Holy Spirit is the Only kind of God's Personal Power for His Children.
+            
+            </p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.9 }}
+            className="bg-neutral-800 border border-neutral-700 rounded-xl p-8 shadow-lg hover:shadow-blue-600/30 transition"
+          >
+            <h2 className="text-2xl font-semibold text-blue-400 mb-4">
+              Our Vision
+            </h2>
+            <p className="text-neutral-300 leading-relaxed">
+                 To grow a consolidated faith in the Lord Jesus Christ
+            </p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.9 }}
+            className="bg-neutral-800 border border-neutral-700 rounded-xl p-8 shadow-lg hover:shadow-blue-600/30 transition"
+          >
+            <h2 className="text-2xl font-semibold text-blue-400 mb-4">
+              Our Objective
+            </h2>
+            <p className="text-neutral-300 leading-relaxed">
+              TOMBSTONE...TO GOD ALONE BE ALL THE GLORY.
             </p>
           </motion.div>
         </div>
