@@ -49,11 +49,7 @@ export const testimonials = [
     image: user5,
     text: "Permanently joining Dream House Chapel International has been one of the best decisions ever! There are gods and there are gods but The GOD of Pastor Fred surpasses them all!!!.",
   },
-  {
-    user: "Emily Davis",
-    company: "Synergy Systems",
-    text: "The team went above and beyond to ensure our project was a success. Their expertise and dedication are unmatched. I look forward to working with them again in the future.",
-  },
+ 
 ];
 
 export const features = [
